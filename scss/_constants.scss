@@ -1,0 +1,33 @@
+$mainBackgroundColor: #FDFDFB;
+$figureColore: #EAE3D4;
+$textHeaderColor: #555248;
+$footerBackgroundColor: #444240;
+$footerColor: #fff;
+$font-lead: "Playfair Display";
+$font-caption: "Prata";
+$button-background: #D4B098;
+
+%font-text {
+  font-family: "Roboto";
+  font-weight: 400;
+}
+
+%font-footer {
+  font-size: 12px;
+  line-height: 1.17;
+}
+
+%flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+%flex-footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  row-gap: 15px;
+}
+

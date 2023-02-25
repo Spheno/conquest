@@ -1,0 +1,123 @@
+@import "./constants";
+
+.quality {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(min-content, max-content));
+  grid-template-rows: 1fr;
+  justify-content: center;
+  align-items: center;
+  background-color: $mainBackgroundColor;
+  padding: 52px 0 21px;
+  column-gap: 69px;
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: 468px 519px, 365px 365px, 755px 775px;
+  background-position: 0 0, 120% -120%, 215% 20%, 215% 20%;
+  background-image: linear-gradient(#F7F5EF, #F7F5EF),
+    radial-gradient(circle, transparent 69%, #D4B098 70%, transparent 70%),
+    radial-gradient(circle, transparent 69.5%, #D4B098 70%, transparent 70%);
+}
+
+.quality__text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  grid-column: 2/3;
+  grid-row: 1/2;
+}
+
+.quality__text {
+  @extend %font-text;
+  font-size: 16px;
+  line-height: 1.5;
+  width: 376px;
+  margin: 38px 0 45px;
+}
+
+.quality__button {
+  background-color: $button-background;
+}
+
+.quality__gallery {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  grid-column: 1/2;
+  grid-row: 1/2;
+  row-gap: 20px;
+}
+
+.quality__gallery-img {
+  width: 521px;
+}
+
+.quality__button-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 63px;
+  margin-right: 80px;
+  align-self: flex-end;
+}
+
+.quality__gallery-button {
+  background-color: transparent;
+}
+
+.quality__gallery-counter {
+  font-family: $font-caption;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.35;
+  color: #1B1A17;
+}
+
+@media (max-width: 1000px) {
+
+  .quality__text {
+    width: 300px;
+  }
+
+  .quality__gallery-img {
+    width: 400px;
+  }
+
+  .quality {
+    column-gap: 30px;
+  }
+
+}
+
+@media (max-width: 767px) {
+
+  .quality {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, minmax(min-content, max-content));
+    row-gap: 30px;
+  }
+
+  .quality__text-container {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .quality__gallery {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    row-gap: 20px;
+  }
+
+  .quality__button-container {
+    align-self: start;
+    margin-left: 60%;
+  }
+
+  .quality__gallery-img {
+    width: 321px;
+  }
+
+}

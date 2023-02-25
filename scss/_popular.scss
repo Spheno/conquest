@@ -1,0 +1,98 @@
+@import "./constants";
+
+.popular {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+}
+
+.popular__title {
+  margin: 49px auto 0;
+}
+
+.popular__link {
+  @extend %font-text;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.17;
+  margin-right: 98px;
+  align-self: flex-end;
+  height: 26px;
+  border-bottom: .5px solid #444240;
+
+  &:hover {
+    font-weight: 700;
+  }
+}
+
+.popular__card-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  column-gap: 34px;
+  row-gap: 34px;
+  margin: 25px auto 86px;
+}
+
+.popular__card {
+  width: 370px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: $mainBackgroundColor;
+}
+
+.popular__card-title {
+  font-family: $font-lead;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.73;
+  margin: 40px 39px 10px;
+  align-self: flex-start;
+}
+
+.popular__card-price {
+  font-family: $font-caption;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.35;
+  align-self: flex-start;
+  margin-left: 39px;
+}
+
+.popular__card-img {
+  width: 313px;
+  border: solid 1px transparent;
+  border-radius: 50%;
+  background-image: linear-gradient(#FDFDFB, #FDFDFB),
+    linear-gradient(to right, rgba(226, 208, 196, 0), rgba(226, 208, 196, 1));
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+}
+
+.popular__card-link {
+  font-family: $font-lead;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.33;
+  position: relative;
+  align-self: flex-start;
+  margin: 21px 88px 38px;
+}
+
+.popular__card-line {
+  left: -45px;
+  width: 30px;
+}
+
+@media (max-width: 767px) {
+
+  .popular__title {
+    margin-bottom: 20px;
+  }
+
+}
