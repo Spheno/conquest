@@ -40,7 +40,8 @@
 }
 
 .lead__text {
-  @extend %font-text;
+  // @extend %font-text;
+  font-family: $font;
   font-weight: 300;
   font-size: 14px;
   line-height: 1.5;
@@ -48,8 +49,8 @@
 }
 
 .lead__button {
-  background-color: #444240;
-  color: #fff;
+  background-color: $footerBackgroundColor;
+  color: $footerColor;
   margin: 64px 0 210px;
 }
 
@@ -139,9 +140,9 @@
 
   .lead {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     background-position: 100%;
   }
 

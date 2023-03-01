@@ -51,7 +51,7 @@
 
 .header__counter {
   border-radius: 50%;
-  background-color: #E6C8B4;
+  background-color: $counterBackgroundColor;
   width: 13px;
   height: 13px;
   position: absolute;
@@ -69,9 +69,7 @@
 }
 
 .header__counter_active {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @extend %flex-center;
 }
 
 @media (max-width: 1000px) {
@@ -170,9 +168,6 @@
     border-top: solid 1px #000;
     padding: 20px 0;
     width: 90px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
   }
 
   .header__menu-span_active {

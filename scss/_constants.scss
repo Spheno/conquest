@@ -3,14 +3,13 @@ $figureColore: #EAE3D4;
 $textHeaderColor: #555248;
 $footerBackgroundColor: #444240;
 $footerColor: #fff;
-$font-lead: "Playfair Display";
-$font-caption: "Prata";
+$mainTextColor: #1B1A17;
+$counterBackgroundColor: #E6C8B4;
 $button-background: #D4B098;
 
-%font-text {
-  font-family: "Roboto";
-  font-weight: 400;
-}
+$font-lead: "Playfair Display";
+$font-caption: "Prata";
+$font: "Roboto";
 
 %font-footer {
   font-size: 12px;
@@ -23,11 +22,21 @@ $button-background: #D4B098;
   align-items: center;
 }
 
+%flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 %flex-footer {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
-  row-gap: 15px;
 }
 
+%grid {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}

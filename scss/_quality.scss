@@ -1,11 +1,9 @@
 @import "./constants";
 
 .quality {
-  display: grid;
+  @extend %grid;
   grid-template-columns: repeat(2, minmax(min-content, max-content));
   grid-template-rows: 1fr;
-  justify-content: center;
-  align-items: center;
   background-color: $mainBackgroundColor;
   padding: 52px 0 21px;
   column-gap: 69px;
@@ -14,8 +12,8 @@
   background-size: 468px 519px, 365px 365px, 755px 775px;
   background-position: 0 0, 120% -120%, 215% 20%, 215% 20%;
   background-image: linear-gradient(#F7F5EF, #F7F5EF),
-    radial-gradient(circle, transparent 69%, #D4B098 70%, transparent 70%),
-    radial-gradient(circle, transparent 69.5%, #D4B098 70%, transparent 70%);
+    radial-gradient(circle, transparent 69%, $button-background 70%, transparent 70%),
+    radial-gradient(circle, transparent 69.5%, $button-background 70%, transparent 70%);
 }
 
 .quality__text-container {
@@ -28,7 +26,8 @@
 }
 
 .quality__text {
-  @extend %font-text;
+  font-family: $font;;
+  line-height: 400;
   font-size: 16px;
   line-height: 1.5;
   width: 376px;
@@ -40,10 +39,8 @@
 }
 
 .quality__gallery {
-  display: flex;
+  @extend %flex-center;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   grid-column: 1/2;
   grid-row: 1/2;
   row-gap: 20px;
@@ -54,9 +51,7 @@
 }
 
 .quality__button-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  @extend %flex;
   width: 63px;
   margin-right: 80px;
   align-self: flex-end;

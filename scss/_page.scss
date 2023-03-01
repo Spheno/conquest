@@ -1,0 +1,45 @@
+@import "./_constants";
+
+.page {
+  font-family: $font;
+  font-size: 14px;
+  font-weight: 400;
+  margin: 0 auto;
+  max-width: 1280px;
+  min-width: 320px;
+  background-color: $footerColor;
+  color: $mainTextColor;
+}
+
+.lock {
+  overflow: hidden;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.title {
+  font-family: $font-lead;
+  font-size: 32px;
+  line-height: 1.33;
+  font-weight: 400;
+}
+
+.text-line {
+  height: 1px;
+  display: block;
+  border-bottom: 1px solid #8B8371;
+  position: absolute;
+  top: 55%;
+}
+
+.button {
+  width: 205px;
+  font-family: $font;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.17;
+  padding: 24px 0;
+  text-transform: uppercase;
+}

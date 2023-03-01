@@ -1,7 +1,5 @@
 .social-network {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @extend %flex-center;
   padding: 81px 30px 90px;
 }
 
@@ -17,7 +15,8 @@
 }
 
 .social-network__text {
-  @extend %font-text;
+  font-family: $font;
+  font-weight: 400;
   font-size: 16px;
   line-height: 1.7;
   margin: 40px 0 119px;
@@ -31,17 +30,16 @@
 .social-network__link-container {
   width: 93px;
   height: 23px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  @extend %flex;
 }
 
 .social-network__gallary {
   display: grid;
+  justify-content: space-between;
   grid-template-columns: repeat(2, minmax (min-content, max-content));
   grid-template-rows: repeat(2, minmax (min-content, max-content));
   gap: 10px;
-  justify-content: space-between;
+
 }
 
 .social-network__gallary-img_1 {

@@ -6,10 +6,10 @@
   color: $footerColor;
   padding: 15px 183px;
   display: grid;
-  grid-template-columns: repeat(4, minmax(min-content, max-content));
-  grid-template-rows: minmax(min-content, max-content);
   justify-content: space-between;
   align-content: center;
+  grid-template-columns: repeat(4, minmax(min-content, max-content));
+  grid-template-rows: minmax(min-content, max-content);
   overflow: auto;
 }
 
@@ -47,18 +47,12 @@
 }
 
 .footer__menu-block {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  flex-direction: column;
+  @extend %flex-footer;
   row-gap: 15px;
 }
 
 .footer__block {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  flex-direction: column;
+  @extend %flex-footer;
 }
 
 .footer__title {
